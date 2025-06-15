@@ -37,6 +37,7 @@ local boat = {
 		visual = "mesh",
 		mesh = "mcl_boats_boat.b3d",
 		textures = {"wood.png"},
+		visual_size = {x = 3, y = 3}, -- scale the model 3x
 	},
 
 	driver = nil,
@@ -45,6 +46,7 @@ local boat = {
 	removed = false,
 	auto = false
 }
+
 
 
 function boat.on_rightclick(self, clicker)
