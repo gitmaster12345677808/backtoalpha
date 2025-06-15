@@ -40,7 +40,10 @@ minetest.register_node(":minecraft:water_source", {
 	liquid_viscosity = WATER_VISC,
 	post_effect_color = {a = 128, r = 0, g = 0, b = 255},
 	groups = {water = 3, liquid = 3},
-	waving = 3
+	waving = 3,
+
+	on_blast = function(pos, intensity)
+	end,
 })
 
 minetest.register_node(":minecraft:water_flowing", {
@@ -84,7 +87,10 @@ minetest.register_node(":minecraft:water_flowing", {
 	liquid_viscosity = WATER_VISC,
 	post_effect_color = {a = 128, r = 0, g = 0, b = 255},
 	groups = {water = 3, liquid = 3},
-	waving = 3
+	waving = 3,
+
+	on_blast = function(pos, intensity)
+	end,
 })
 
 --lavalalvalvalvavlalvalvlalvl!!!!
@@ -131,7 +137,10 @@ minetest.register_node(":minecraft:lava_flowing", {
 	liquid_viscosity = LAVA_VISC,
 	post_effect_color = {a=192, r=255, g=64, b=0},
 	groups = {lava=3, liquid=1},
-	waving = 3
+	waving = 3,
+
+	on_blast = function(pos, intensity)
+	end,
 })
 
 minetest.register_node(":minecraft:lava_source", {
@@ -174,7 +183,9 @@ minetest.register_node(":minecraft:lava_source", {
 	liquid_viscosity = LAVA_VISC,
 	post_effect_color = {a=192, r=255, g=64, b=0},
 	groups = {lava=3, liquid=1},
-	waving = 3
+	waving = 3,
+	on_blast = function(pos, intensity)
+	end,
 })
 
 dofile(minetest.get_modpath('mcnt_liquids')..'/buckets.lua')
