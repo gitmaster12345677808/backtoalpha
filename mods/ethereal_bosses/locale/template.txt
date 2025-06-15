@@ -1,0 +1,47 @@
+# textdomain: ethereal_bosses
+
+Eye=
+Nectar=
+Queen's bottle=
+Rotten Wood=
+Nature Guardian Roots=
+Frosty Queen Trophy=
+Crazy Mushrrom Trophy=
+Heated Trophy=
+Mushroom Pickaxe=
+Mushroom Shovel=
+Mushroom Axe=
+Mushroom Sword=
+Nature Whip=
+Nature Rod=
+Obsidian Sword=
+Flaming Sword=
+Roots Helmet=
+Roots Chestplate=
+Roots Helmet=
+Roots Chestplate=
+Crazy Mushroom Glove=
+Nature Guardian Roots=
+
+Crazy Mushroom=
+Depths Eye=
+Frosty Queen=
+Heated=
+Ice Monster=
+Nature Guardian=
+
+Hello adventurer,=
+be careful when you walk around here.=
+It used to be peaceful here, but the queen used magic,=
+to avenge the king's death, and the magic created terrible monsters,=
+and she became the frosty Queen.=
+Do you have 20 Eyes?,I will give you something in return.=
+Yes, I have them=
+
+
+
+
+
+
+
+
