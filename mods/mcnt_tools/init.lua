@@ -10,7 +10,7 @@ minetest.register_tool(":minecraft:wooden_pickaxe", {
 			cracky = {
 				maxlevel = 2, -- Can mine stone, coal ore, but not iron ore
 				uses = 33,
-				times = { [2]=1.50, [3]=0.75 }
+				times = { [2]=3.50, [3]=3.50 }
 			},
 		},
 		damage_groups = {fleshy=2},
@@ -27,7 +27,7 @@ minetest.register_tool(":minecraft:stone_pickaxe", {
 			cracky = {
 				maxlevel = 2, -- Can mine iron ore, but not obsidian
 				uses = 132,
-				times = { [1]=1.25, [2]=0.75, [3]=0.40 }
+				times = { [1]=0.50, [2]=2.50, [3]=3.00 }
 			},
 		},
 		damage_groups = {fleshy=4},
@@ -44,7 +44,7 @@ minetest.register_tool(":minecraft:iron_pickaxe", {
 			cracky = {
 				maxlevel = 3, -- Can mine obsidian
 				uses = 251,
-				times = { [1]=0.85, [2]=0.50, [3]=0.35 }
+				times = { [1]=0.85, [2]=1.50, [3]=1.35 }
 			},
 		},
 		damage_groups = {fleshy=6},
@@ -93,7 +93,7 @@ minetest.register_tool(":minecraft:golden_pickaxe", {
 			cracky = {
 				maxlevel = 2, -- Same as wooden
 				uses = 33,
-				times = { [2]=1.50, [3]=0.75 }
+				times = { [2]=0.50, [3]=0.75 }
 			},
 		},
 		damage_groups = {fleshy=2},
@@ -110,7 +110,7 @@ minetest.register_tool(":minecraft:diamond_pickaxe", {
 			cracky = {
 				maxlevel = 3,
 				uses = 1562,
-				times = { [1]=0.65, [2]=0.40, [3]=0.25 }
+				times = { [1]=0.65, [2]=0.75, [3]=0.80 }
 			},
 		},
 		damage_groups = {fleshy=8},
@@ -181,7 +181,7 @@ minetest.register_tool(":minecraft:golden_shovel", {
 			crumbly = {
 				maxlevel = 2,
 				uses = 33,
-				times = { [1]=1.00, [2]=0.50, [3]=0.30 }
+				times = { [1]=0.10, [2]=0.50, [3]=0.30 }
 			},
 		},
 		damage_groups = {fleshy=2},
@@ -218,7 +218,7 @@ minetest.register_tool(":minecraft:wooden_axe", {
 			choppy = {
 				maxlevel = 2,
 				uses = 33,
-				times = { [1]=1.25, [2]=0.65, [3]=0.40 }
+				times = { [1]=1.25, [2]=3.25, [3]=3.40 }
 			},
 		},
 		damage_groups = {fleshy=4},
@@ -235,7 +235,7 @@ minetest.register_tool(":minecraft:stone_axe", {
 			choppy = {
 				maxlevel = 2,
 				uses = 132,
-				times = { [1]=0.65, [2]=0.40, [3]=0.25 }
+				times = { [1]=0.65, [2]=2.40, [3]=3.25 }
 			},
 		},
 		damage_groups = {fleshy=5},
@@ -252,7 +252,7 @@ minetest.register_tool(":minecraft:iron_axe", {
 			choppy = {
 				maxlevel = 2,
 				uses = 251,
-				times = { [1]=0.45, [2]=0.30, [3]=0.20 }
+				times = { [1]=0.45, [2]=1.30, [3]=3.20 }
 			},
 		},
 		damage_groups = {fleshy=6},
@@ -269,7 +269,7 @@ minetest.register_tool(":minecraft:golden_axe", {
 			choppy = {
 				maxlevel = 2,
 				uses = 33,
-				times = { [1]=1.25, [2]=0.65, [3]=0.40 }
+				times = { [1]=0.25, [2]=1.00, [3]=1.40 }
 			},
 		},
 		damage_groups = {fleshy=4},
@@ -286,7 +286,7 @@ minetest.register_tool(":minecraft:diamond_axe", {
 			choppy = {
 				maxlevel = 3,
 				uses = 1562,
-				times = { [1]=0.35, [2]=0.20, [3]=0.15 }
+				times = { [1]=0.35, [2]=1.20, [3]=2.15 }
 			},
 		},
 		damage_groups = {fleshy=7},
