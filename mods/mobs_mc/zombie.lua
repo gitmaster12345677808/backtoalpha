@@ -84,6 +84,7 @@ local zombie = {
 	light_damage = 2,
 	view_range = 16,
 	attack_type = "dogfight",
+	attack_players = true, -- Set to true to make zombies attack players when near
 }
 
 mobs:register_mob("mobs_mc:zombie", zombie)
