@@ -1,5 +1,12 @@
--- custom_glowstone/init.lua
+-- Glowstone toggle (set to false to disable glowstone)
+local glowstone_enabled = true
 
+if not glowstone_enabled then
+	minetest.log("action", "[custom_glowstone] Glowstone is disabled via config.")
+	return
+end
+
+-- Glowstone glass sounds
 local glass_sounds = {
 	"glass1",
 	"glass2",
@@ -7,6 +14,7 @@ local glass_sounds = {
 }
 local glass_sound_index = 1
 
+-- Register Glowstone Node
 minetest.register_node("glowstone:glowstone", {
 	description = "Glowstone",
 	tiles = {"glowstone.png"},
@@ -18,7 +26,7 @@ minetest.register_node("glowstone:glowstone", {
 	sounds = {
 		footstep = {name = "stone", gain = 0.4},
 		dig = {name = "stone", gain = 0.5},
-		-- 'dug' will be handled manually in on_dig
+		-- 'dug' is handled manually in on_dig
 	},
 
 	-- Custom dig sound handler
@@ -42,7 +50,7 @@ minetest.register_node("glowstone:glowstone", {
 	end,
 })
 
--- Optional: Crafting recipe
+-- Crafting recipe for Glowstone
 minetest.register_craft({
 	output = "glowstone:glowstone",
 	recipe = {
@@ -51,3 +59,4 @@ minetest.register_craft({
 		{"", "minecraft:torch", ""}
 	}
 })
+
