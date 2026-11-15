@@ -265,23 +265,27 @@ function doors.register(name, def)
 	def.collision_box = {type = "fixed", fixed = {-1/2,-1/2,-1/2,1/2,3/2,-5/16}}
 	def.use_texture_alpha = "clip"
 	def.sounds = block_sound('wood')
+  local doors = {
+    "a",
+    "b",
+    "c",
+    "d"
+  }
+  for num, letter in ipairs(doors)
+  do
+    local this_def = {}
+    for prop, val in pairs(def)
+    do
+      this_def[prop] = val
+    end
+    this_def.mesh = "mcnt_door_" .. letter .. ".obj"
+    this_def.name = name .. "_" .. letter
+    this_def["_doortype"] = letter
+    minetest.register_node(":" .. this_def.name, this_def)
+    doors.registered_doors = doors.registered_doors or {}
+    doors.registered_doors[name .. "_" .. letter] = true
+  end
 
-	def.mesh = "mcnt_door_a.obj"
-	minetest.register_node(":" .. name .. "_a", def)
-
-	def.mesh = "mcnt_door_b.obj"
-	minetest.register_node(":" .. name .. "_b", def)
-
-	def.mesh = "mcnt_door_a2.obj"
-	minetest.register_node(":" .. name .. "_c", def)
-
-	def.mesh = "mcnt_door_b2.obj"
-	minetest.register_node(":" .. name .. "_d", def)
-
-	doors.registered_doors[name .. "_a"] = true
-	doors.registered_doors[name .. "_b"] = true
-	doors.registered_doors[name .. "_c"] = true
-	doors.registered_doors[name .. "_d"] = true
 end
 
 doors.register("minecraft:door", {
