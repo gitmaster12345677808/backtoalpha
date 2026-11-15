@@ -266,24 +266,24 @@ function doors.register(name, def)
 	def.use_texture_alpha = "clip"
 	def.sounds = block_sound('wood')
   local doors = {
-    "a",
-    "b",
-    "c",
-    "d"
+    {"a", "a"},
+    {"b", "b"},
+    {"c", "a2"},
+    {"d", "b2"},
   }
-  for num, letter in ipairs(doors)
+  for _, things in ipairs(doors)
   do
     local this_def = {}
     for prop, val in pairs(def)
     do
       this_def[prop] = val
     end
-    this_def.mesh = "mcnt_door_" .. letter .. ".obj"
-    this_def.name = name .. "_" .. letter
-    this_def["_doortype"] = letter
+    this_def.mesh = "mcnt_door_" .. things[2] .. ".obj"
+    this_def.name = name .. "_" .. things[1]
+    this_def["_doortype"] = things[1]
     minetest.register_node(":" .. this_def.name, this_def)
     doors.registered_doors = doors.registered_doors or {}
-    doors.registered_doors[name .. "_" .. letter] = true
+    doors.registered_doors[name .. "_" .. things[1]] = true
   end
 
 end
